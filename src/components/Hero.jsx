@@ -8,7 +8,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0">
         <div
           className="w-full h-full bg-fixed bg-cover bg-center"
-          style={{ backgroundImage: "url('/IMG-20240629-WA0001.jpg')" }}
+          style={{ backgroundImage: "url('/Staticlandingpages.jpg')" }}
         />
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/70 z-10" />

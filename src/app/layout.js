@@ -11,8 +11,8 @@ import "./globals.css";
 // });
 
 export const metadata = {
-  title: "Studio -photography",
-  description: "photoshop photography studio",
+  title: "vivek -portfolio",
+  description: "full stack developer -portfolio",
 };
 
 export default function RootLayout({ children }) {
