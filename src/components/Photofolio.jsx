@@ -24,7 +24,7 @@ export default function PortfolioSection() {
       />
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-bold text-gray-800 dark:text-white mb-12">
-          Site's
+          My work
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">

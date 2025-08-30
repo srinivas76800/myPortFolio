@@ -1,5 +1,5 @@
 import { Instagram, Mail, MapPin, Phone } from 'lucide-react';
-import { FaWhatsapp, FaTelegramPlane } from 'react-icons/fa';
+import { FaLinkedin ,FaWhatsapp, FaTelegramPlane } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import Link from 'next/link';
 
@@ -39,8 +39,11 @@ export default function Footer() {
             <Link href="http://t.me/mrVemunuri02" target="_blank">
               <FaTelegramPlane  className="hover:text-white transition"  size={25}/>
             </Link>
-            <Link href="#" target="_blank">
+            {/* <Link href="#" target="_blank">
               <FaXTwitter  className="hover:text-white transition"  size={25}/>
+            </Link> */}
+            <Link href="https://www.linkedin.com/in/vemunuri-vivek-d15m02y2004" target="_blank">
+              <FaLinkedin  className="hover:text-white transition"  size={25}/>
             </Link>
           </div>
         </div>

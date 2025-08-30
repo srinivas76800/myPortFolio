@@ -1,8 +1,9 @@
 'use client';
-
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
-import emailjs from "emailjs-com";
+import Lottie from "lottie-react";
+import ButtonNimation from "../assets/Buttonanimation.json";
+import { Mail } from 'lucide-react';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -62,7 +63,7 @@ export default function ContactSection() {
           viewport={{ once: true }}
           className="text-gray-600 dark:text-gray-300 mb-12"
         >
-          Fill out the form and let’s create magic through the lens 📷
+          Fill out the form and let’s create Creagy web sites 📷🤝
         </motion.p>
 
         <motion.form
@@ -102,9 +103,13 @@ export default function ContactSection() {
           ></textarea>
           <button
             type="submit"
-            className="w-full bg-white text-black py-3 rounded-xl font-semibold hover:bg-gray-800 transition"
+            className="flex gap-3 justify-center items-center w-full bg-white text-black py-1 rounded-xl font-semibold hover:cursor-pointer transition"
           >
-            Send Message 🚀
+            Send Message<Lottie
+              animationData={ButtonNimation}
+              loop={true}
+              className="w-12 h-12"
+            />
           </button>
         </motion.form>
 
@@ -114,13 +119,13 @@ export default function ContactSection() {
           </p>
         )}
 
-        <p className="mt-6 text-sm text-gray-500 dark:text-gray-400">
+        <p className="flex justify-center gap-2 items-center mt-6 text-sm text-gray-500 dark:text-gray-400">
           Or drop me a mail at{' '}
           <a
-            href="mailto:you@example.com"
-            className="underline text-black dark:text-white"
+            href="srinivasvemunuri8@gmail.com"
+            className="flex items-center gap-1 text-black dark:text-white"
           >
-            srinivasvemunuri@gmail.com
+            <Mail size={16} />Mail
           </a>
         </p>
       </div>

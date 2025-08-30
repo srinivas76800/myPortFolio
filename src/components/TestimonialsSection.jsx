@@ -75,7 +75,7 @@ export default function TestimonialsSection() {
                   {item.name}
                 </h3>
               </div>
-              <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed italic">
                 {item.review}
               </p>
             </motion.div>
