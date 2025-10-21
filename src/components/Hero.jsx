@@ -3,10 +3,11 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import Lottie from "lottie-react";
 import waveyBirdie from "../assets/WaveyBirdie.json";
+import Drag from "../components/Pointer"
  
 export default function HeroSection() {
   const [text, setText] = useState("");
-  const fullText = "YOOO";
+  const fullText = "YOO";
   useEffect(() => {
     let i = 0;
     const interval = setInterval(() => {
@@ -17,7 +18,8 @@ export default function HeroSection() {
     return () => clearInterval(interval);
   }, []);
   return (
-    <section className="relative h-screen w-full bg-black text-white overflow-hidden rounded-b-4xl">
+    <section className="relative h-screen w-full bg-black text-white overflow-hidden rounded-b-4xl"  style={{ cursor: 'none'}}>
+      <Drag/>
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <div
@@ -34,8 +36,9 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-4xl flex items-center gap-2 md:text-6xl font-bold tracking-tight"
+            className="text-4xl flex flex-col items-center gap-2 md:text-6xl font-bold tracking-tight"
           >
+            <div>
             {text},{" "}
             <span className="inline-block w-40 h-14 overflow-hidden align-middle rounded-full">
               <video
@@ -47,7 +50,8 @@ export default function HeroSection() {
                 className="w-full h-full object-cover"
               />
             </span>
-            {" "}I'm Vivek
+            </div>
+            I'm Vivek
             {/* <Lottie
               animationData={waveyBirdie}
               loop={true}
@@ -61,7 +65,7 @@ export default function HeroSection() {
             transition={{ delay: 0.5, duration: 1 }}
             className="mt-4 text-lg md:text-xl max-w-2xl"
           >
-            A <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 px-3 py-1 mx-2 rounded-3xl font-bold text-black'>Full stack web developer</span> who codes clean, builds fast, and vibes with pixels & logic.
+            A <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 px-3 py-1 mx-2 rounded-3xl font-bold text-black'>Full stack web developer</span> who codes clean, builds fast, and <br/>vibes with pixels & logic.
             From crafting smooth UIs to wiring solid backend systems <br /> — I turn coffee into code.
           </motion.p>
 

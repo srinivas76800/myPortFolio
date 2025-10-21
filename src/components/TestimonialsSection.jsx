@@ -51,10 +51,6 @@ export default function TestimonialsSection() {
   return (
     <section id="testimonials" className="py-20 px-6 bg-white dark:bg-zinc-900">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-bold text-gray-800 dark:text-white mb-12">
-          What Clients Say 💬
-        </h2>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((item, index) => (
             <motion.div

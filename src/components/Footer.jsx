@@ -19,11 +19,11 @@ export default function Footer() {
         <div>
           <h4 className="text-lg font-medium mb-2">Contact</h4>
           <p className="text-gray-400 flex justify-center md:justify-start items-center gap-2 hover:text-white">
-            <Mail size={16} /> <a href="mailto:rahulstudio@gmail.com">srinivasvemunuri8@gmail.com</a>
+            <Mail size={16} /> <a href="mailto:srinivasvemunri8@gmail.com">srinivasvemunuri8@gmail.com</a>
           </p>
-          <p className="text-gray-400 flex justify-center md:justify-start items-center gap-2 mt-2 hover:text-white">
+          {/* <p className="text-gray-400 flex justify-center md:justify-start items-center gap-2 mt-2 hover:text-white">
             <Phone size={16} /> +91 9392532694
-          </p>
+          </p> */}
         </div>
 
         {/* Social Links */}
@@ -33,9 +33,9 @@ export default function Footer() {
             <Link href="https://www.instagram.com/mr_vemunuri_02?igsh=NjV4MjF4eGgxdmp5 " target="_blank">
               <Instagram className="hover:text-white transition" size={25}/>
             </Link>
-            <Link href=" https://wa.me/+919392532694" target="_blank">
+            {/* <Link href=" https://wa.me/+919392532694" target="_blank">
               <FaWhatsapp  className="hover:text-white transition"  size={25}/>
-            </Link>
+            </Link> */}
             <Link href="http://t.me/mrVemunuri02" target="_blank">
               <FaTelegramPlane  className="hover:text-white transition"  size={25}/>
             </Link>

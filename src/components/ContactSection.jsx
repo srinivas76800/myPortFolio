@@ -122,7 +122,7 @@ export default function ContactSection() {
         <p className="flex justify-center gap-2 items-center mt-6 text-sm text-gray-500 dark:text-gray-400">
           Or drop me a mail at{' '}
           <a
-            href="srinivasvemunuri8@gmail.com"
+            href="mailto:srinivasvemunri8@gmail.com"
             className="flex items-center gap-1 text-black dark:text-white"
           >
             <Mail size={16} />Mail
