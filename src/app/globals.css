@@ -11,3 +11,38 @@ body {
 .rotate-bg {
   animation: rotateGradient 6s linear infinite;
 }
+body{
+  overflow-x: hidden;
+}
+/* marquee styles */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.marquee__inner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  animation: marquee 12s linear infinite;
+}
+
+.marquee__item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.marquee::-webkit-scrollbar { display: none; }
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.group:hover .marquee__inner,
+.group:focus-within .marquee__inner {
+  animation-duration: 6s;
+}

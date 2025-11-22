@@ -18,11 +18,7 @@ export default function PortfolioSection() {
       id="portfolio"
       className="px-6 bg-white dark:bg-zinc-900 pb-16"
     >
-      <div
-        style={{ backgroundImage: "url('/monkey.png')" }}
-        className='h-48 w-55 bg-cover bg-center'
-      />
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="max-w-6xl pt-5 mx-auto text-center">
         <h2 className="text-4xl font-bold text-gray-800 dark:text-white mb-12">
           My work
         </h2>

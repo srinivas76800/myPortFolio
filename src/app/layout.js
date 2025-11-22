@@ -1,5 +1,6 @@
 import "./globals.css";
-
+import ClientLayout from "./ClientLayout";
+import Stairs from "./Components/Stairs";
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
 //   subsets: ["latin"],
@@ -27,9 +28,10 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body
-        className={`antialiased`}
+        className={`antialiased bg-[#121212]`}
       >
-        {children}
+        <Stairs>{children}</Stairs>
+        {/* {children} */}
       </body>
     </html>
   );

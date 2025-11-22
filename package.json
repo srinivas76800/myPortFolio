@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^12.11.3",
+    "gsap": "^3.13.0",
     "lottie-react": "^2.4.1",
     "lucide-react": "^0.510.0",
     "motion": "^12.23.24",

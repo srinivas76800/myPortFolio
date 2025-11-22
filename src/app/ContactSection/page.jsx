@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 import Lottie from "lottie-react";
-import ButtonNimation from "../assets/Buttonanimation.json";
+import ButtonNimation from "../../assets/Buttonanimation.json";
 import { Mail } from 'lucide-react';
 
 export default function ContactSection() {
@@ -44,7 +44,7 @@ export default function ContactSection() {
 
 
   return (
-    <section id="contact" className="py-20 px-6 bg-gray-100 dark:bg-zinc-950">
+    <section id="contact" className="py-20 px-6 bg-gray-100 dark:bg-zinc-950 h-screen">
       <div className="max-w-3xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -119,7 +119,7 @@ export default function ContactSection() {
           </p>
         )}
 
-        <p className="flex justify-center gap-2 items-center mt-6 text-sm text-gray-500 dark:text-gray-400">
+        {/* <p className="flex justify-center gap-2 items-center mt-6 text-sm text-gray-500 dark:text-gray-400">
           Or drop me a mail at{' '}
           <a
             href="mailto:srinivasvemunri8@gmail.com"
@@ -127,7 +127,7 @@ export default function ContactSection() {
           >
             <Mail size={16} />Mail
           </a>
-        </p>
+        </p> */}
       </div>
     </section>
   );
