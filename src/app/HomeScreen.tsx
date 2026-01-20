@@ -10,7 +10,7 @@ import Drag from "./Components/Pointer"
 
 const HomeScreen = () => {
     return (
-        <div className="dark:bg-zinc-900 overflow-hidden">
+        <div className=" overflow-hidden">
             <HeroSection />
             {/* <Drag /> */}
             {/* <PortfolioSection /> */}

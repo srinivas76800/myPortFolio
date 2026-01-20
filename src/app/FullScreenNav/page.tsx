@@ -12,7 +12,7 @@ const FullScreenNav = () => {
   const navRef = useRef(null)
 
   return (
-    <div className='h-screen relative text-white'>
+    <div className='h-screen bg-black relative text-white'>
       <div>
         <Link
           href='/'
@@ -38,9 +38,9 @@ const FullScreenNav = () => {
             href='/Projects'
             onMouseEnter={() => setProjects(true)}
             onMouseLeave={() => setProjects(false)}
-            className='font-bold border-t border-white/20 w-full group cursor-pointer h-30'
+            className='font-bold border-t border-white/20 w-full group cursor-pointer h-30 bg-red-400'
           >
-            <div className="h-32 flex items-center justify-center">
+            {/* <div className="flex items-center justify-center"> */}
               <div className='w-full'>
                 <div className='h-32' > {
                   projects ? (
@@ -56,7 +56,7 @@ const FullScreenNav = () => {
                     </div>
                   ) : (<div className='h-30 transition-all'>Projects</div>)}</div >
               </div>
-            </div>
+            {/* </div> */}
           </Link>
           <Link
             href='/AboutSection'

@@ -1,18 +1,41 @@
 @import "tailwindcss";
 
 body {
-  font-family: 'Karla', sans-serif
-}
-@keyframes rotateGradient {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  font-family: 'Karla', sans-serif;
+  overflow-x: hidden;
 }
 
 .rotate-bg {
   animation: rotateGradient 6s linear infinite;
 }
-body{
-  overflow-x: hidden;
+@keyframes rotateGradient {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.rainbow::before {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  background-size: 50% 30%;
+  filter: blur(6px);
+  background-image: linear-gradient(#FFF);
+  animation: rotate 4s linear infinite;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
 }
 /* marquee styles */
 .marquee {
@@ -35,14 +58,40 @@ body{
   align-items: center;
 }
 
-.marquee::-webkit-scrollbar { display: none; }
-
-@keyframes marquee {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+.marquee::-webkit-scrollbar {
+  display: none;
 }
 
 .group:hover .marquee__inner,
 .group:focus-within .marquee__inner {
   animation-duration: 6s;
+}
+
+
+
+.marquee-inner {
+  animation: marqueeScroll linear infinite;
+}
+
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }

@@ -1,15 +1,6 @@
 import "./globals.css";
-import ClientLayout from "./ClientLayout";
 import Stairs from "./Components/Stairs";
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+import ProjectComponent from "./Context/ProjectsData";
 
 export const metadata = {
   title: "vivek -portfolio",
@@ -30,8 +21,9 @@ export default function RootLayout({ children }) {
       <body
         className={`antialiased bg-[#121212]`}
       >
-        <Stairs>{children}</Stairs>
-        {/* {children} */}
+        <ProjectComponent>
+          <Stairs>{children}</Stairs>
+        </ProjectComponent>
       </body>
     </html>
   );

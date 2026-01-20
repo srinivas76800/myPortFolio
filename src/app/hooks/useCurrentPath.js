@@ -8,7 +8,6 @@ export default function useCurrentPath() {
 
   useEffect(() => {
     setCurrentPath(pathname);
-    console.log('path is changing' ,pathname)
   }, [pathname]);
 
   return currentPath;

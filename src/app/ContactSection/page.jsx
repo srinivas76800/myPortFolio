@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import Lottie from "lottie-react";
 import ButtonNimation from "../../assets/Buttonanimation.json";
 import { Mail } from 'lucide-react';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -44,15 +46,24 @@ export default function ContactSection() {
 
 
   return (
-    <section id="contact" className="py-20 px-6 bg-gray-100 dark:bg-zinc-950 h-screen">
+    <section id="contact" className="overflow-y-scroll [&::-webkit-scrollbar]:hidden py-10 px-6 bg-[url('https://raw.githubusercontent.com/prebuiltui/prebuiltui/refs/heads/main/assets/hero/bg-gradient-2.png')] h-screen">
       <div className="max-w-3xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="text-4xl font-bold text-gray-800 dark:text-white mb-8"
+          className="flex flex-row sm:gap-8 items-center justify-center text-4xl font-bold text-gray-800 dark:text-white mb-8"
         >
+          <Link href='/' >
+            <Image
+              src={require('../../../public/leftarrow.png')}
+              alt='arrow btn'
+              height={50}
+              width={50}
+              className='bg-white rounded-full'
+            />
+          </Link>
           Let’s Work Together ✨
         </motion.h2>
 
@@ -81,7 +92,7 @@ export default function ContactSection() {
             placeholder="Your Name"
             value={formData.name}
             onChange={handleChange}
-            className="p-4 rounded-xl bg-white dark:bg-zinc-800 border border-gray-300 dark:border-zinc-700 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
+            className="p-4 rounded-xl bg-white dark:bg-white/5 border border-gray-300 dark:border-zinc-700 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
           />
           <input
             type="email"
@@ -90,7 +101,7 @@ export default function ContactSection() {
             placeholder="Your Email"
             value={formData.email}
             onChange={handleChange}
-            className="p-4 rounded-xl bg-white dark:bg-zinc-800 border border-gray-300 dark:border-zinc-700 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
+            className="p-4 rounded-xl bg-white dark:bg-white/5 border border-gray-300 dark:border-zinc-700 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
           />
           <textarea
             name="message"
@@ -99,18 +110,14 @@ export default function ContactSection() {
             rows={5}
             value={formData.message}
             onChange={handleChange}
-            className="p-4 rounded-xl bg-white dark:bg-zinc-800 border border-gray-300 dark:border-zinc-700 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
+            className="p-4 rounded-xl bg-white dark:bg-white/5 border border-gray-300 dark:border-zinc-700 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
           ></textarea>
-          <button
-            type="submit"
-            className="flex gap-3 justify-center items-center w-full bg-white text-black py-1 rounded-xl font-semibold hover:cursor-pointer transition"
-          >
-            Send Message<Lottie
-              animationData={ButtonNimation}
-              loop={true}
-              className="w-12 h-12"
-            />
-          </button>
+          <div
+            className="rainbow mt-8 font-bold relative z-0 bg-white/15 overflow-hidden p-0.5 flex items-center justify-center rounded-full hover:scale-105 transition duration-300 active:scale-100">
+            <button onSubmit={handleSubmit} className="px-8 w-full text-sm py-3 text-white rounded-full font-medium bg-black backdrop-blur">
+              Let's Build Something Cool
+            </button>
+          </div>
         </motion.form>
 
         {status && (
@@ -118,16 +125,6 @@ export default function ContactSection() {
             {status}
           </p>
         )}
-
-        {/* <p className="flex justify-center gap-2 items-center mt-6 text-sm text-gray-500 dark:text-gray-400">
-          Or drop me a mail at{' '}
-          <a
-            href="mailto:srinivasvemunri8@gmail.com"
-            className="flex items-center gap-1 text-black dark:text-white"
-          >
-            <Mail size={16} />Mail
-          </a>
-        </p> */}
       </div>
     </section>
   );
