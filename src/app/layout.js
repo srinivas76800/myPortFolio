@@ -1,6 +1,7 @@
 import "./globals.css";
 import Stairs from "./Components/Stairs";
 import ProjectComponent from "./Context/ProjectsData";
+import { SpeedInsights } from "@vercel/speed-insights/next"// app performance checker by vercal
 
 export const metadata = {
   title: "vivek -portfolio",
