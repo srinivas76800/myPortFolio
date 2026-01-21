@@ -24,6 +24,7 @@ export default function RootLayout({ children }) {
       >
         <ProjectComponent>
           <Stairs>{children}</Stairs>
+          <SpeedInsights />
         </ProjectComponent>
       </body>
     </html>
