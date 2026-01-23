@@ -6,10 +6,22 @@ import ButtonNimation from "../../assets/Buttonanimation.json";
 import { Mail } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { cn } from "@/lib/utils";
+import { Label } from "../../components/ui/label";
+import { Input } from "../../components/ui/input";
+import {
+  IconBrandGithub,
+  IconBrandGmail,
+  IconBrandGoogle,
+  IconBrandLinkedin,
+  IconBrandOnlyfans,
+  IconBrandTelegram,
+} from "@tabler/icons-react";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
-    name: '',
+    firstname: '',
+    lastname: '',
     email: '',
     message: '',
   });
@@ -22,8 +34,8 @@ export default function ContactSection() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!formData.firstname || !formData.lastname || !formData.email || !formData.message) { return setStatus('fill all filds to contact back you!') }
     setStatus("Sending...");
-    console.log(formData, 'fofm contact')
     try {
       const res = await fetch("/api/send", {
         method: "POST",
@@ -35,7 +47,7 @@ export default function ContactSection() {
       console.log(data, 'from contact ')
       if (data.success) {
         setStatus("Message sent successfully ✅");
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ firstname: "", lastname: '', email: "", message: "" });
       } else {
         setStatus("Failed to send ❌");
       }
@@ -47,20 +59,20 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="overflow-y-scroll [&::-webkit-scrollbar]:hidden py-10 px-6 bg-[url('https://raw.githubusercontent.com/prebuiltui/prebuiltui/refs/heads/main/assets/hero/bg-gradient-2.png')] h-screen">
-      <div className="max-w-3xl mx-auto text-center">
+      {/* <div className="max-w-3xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="flex flex-row sm:gap-8 items-center justify-center text-4xl font-bold text-gray-800 dark:text-white mb-8"
+          className="flex flex-row gap-2 sm:gap-8 items-center justify-center text-md sm:text-2xl md:text-4xl font-bold text-white mb-8"
         >
           <Link href='/' >
             <Image
               src={require('../../../public/leftarrow.png')}
               alt='arrow btn'
-              height={50}
-              width={50}
+              height={30}
+              width={30}
               className='bg-white rounded-full'
             />
           </Link>
@@ -92,7 +104,7 @@ export default function ContactSection() {
             placeholder="Your Name"
             value={formData.name}
             onChange={handleChange}
-            className="p-4 rounded-xl bg-white dark:bg-white/5 border border-gray-300 dark:border-zinc-700 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
+            className="p-4 rounded-xl bg-white/5  text-gray-900  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-600"
           />
           <input
             type="email"
@@ -101,7 +113,7 @@ export default function ContactSection() {
             placeholder="Your Email"
             value={formData.email}
             onChange={handleChange}
-            className="p-4 rounded-xl bg-white dark:bg-white/5 border border-gray-300 dark:border-zinc-700 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
+            className="p-4 rounded-xl bg-white/5  text-gray-900  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-600"
           />
           <textarea
             name="message"
@@ -110,7 +122,7 @@ export default function ContactSection() {
             rows={5}
             value={formData.message}
             onChange={handleChange}
-            className="p-4 rounded-xl bg-white dark:bg-white/5 border border-gray-300 dark:border-zinc-700 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
+            className="p-4 rounded-xl bg-white/5  text-gray-900  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-600"
           ></textarea>
           <div
             className="rainbow mt-8 font-bold relative z-0 bg-white/15 overflow-hidden p-0.5 flex items-center justify-center rounded-full hover:scale-105 transition duration-300 active:scale-100">
@@ -125,7 +137,113 @@ export default function ContactSection() {
             {status}
           </p>
         )}
+      </div> */}
+      <div className="bg-black/50 mx-auto w-full max-w-3xl rounded-none bg-back p-4 md:rounded-2xl md:p-8">
+        <h2 className="text-xl text-center font-extrabold text-white">
+          Let&apos;s Work Together
+        </h2>
+        <div className="my-5 h-px w-full bg-linear-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
+
+        <p className="mt-2 max-w-sm text-sm text-gray-400">
+          Fill out the form and let’s create Creagy web sites 📷🤝
+        </p>
+
+        <form className="my-8" onSubmit={handleSubmit}>
+          <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
+            <LabelInputContainer>
+              <Label htmlFor="firstname">First name</Label>
+              <Input id="firstname" name="firstname" onChange={handleChange} value={formData.firstname} placeholder="Vemunuri" type="text" />
+            </LabelInputContainer>
+            <LabelInputContainer>
+              <Label htmlFor="lastname">Last name</Label>
+              <Input id="lastname" name="lastname" onChange={handleChange} value={formData.lastname} placeholder="vivek" type="text" />
+            </LabelInputContainer>
+          </div>
+          <LabelInputContainer className="mb-4">
+            <Label htmlFor="email">Email Address</Label>
+            <Input id="email" name="email" onChange={handleChange} value={formData.email} placeholder="projectmayhem@example.com" type="email" />
+          </LabelInputContainer>
+          <LabelInputContainer className="mb-4">
+            <Label htmlFor="text">Message</Label>
+            <Input className='h-15' name="message" onChange={handleChange} id="text" value={formData.message} placeholder="Your Massage here.." type="text" />
+          </LabelInputContainer>
+          <button
+            className="group/btn relative block h-10 w-full rounded-md bg-linear-to-br from-black to-neutral-600 font-medium text-white "
+            type="submit"
+          >
+            {status ? status : 'Sign up -->'}
+            <BottomGradient />
+          </button>
+
+          <div className="my-5 h-px w-full bg-linear-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
+
+          <div className="flex flex-col space-y-4">
+
+
+            <Link
+              className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-4 font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
+              href={'https://github.com/srinivas76800'}
+            >
+              <IconBrandGithub className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
+              <span className="text-sm text-neutral-700 dark:text-neutral-300">
+                GitHub
+              </span>
+              <BottomGradient />
+            </Link>
+            <Link
+              className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-4 font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
+              href={'https://www.linkedin.com/in/vemunuri-vivek-d15m02y2004'}
+            >
+              <IconBrandLinkedin className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
+              <span className="text-sm text-neutral-700 dark:text-neutral-300">
+                Linkedin
+              </span>
+              <BottomGradient />
+            </Link>
+            <Link
+              className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-4 font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
+              href={'mailto:srinivasvemunuri8@gmail.com?subject=Hello&body=I want to contact you'}
+            >
+              <IconBrandGmail className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
+              <span className="text-sm text-neutral-700 dark:text-neutral-300">
+                E-mail
+              </span>
+              <BottomGradient />
+            </Link>
+            <Link
+              className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-4 font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
+              href={'https://t.me/mrVemunuri02?text=Hello%20I%20am%20contacting%20you%20from%20your%20portfolio'}
+            >
+              <IconBrandTelegram className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
+              <span className="text-sm text-neutral-700 dark:text-neutral-300">
+                Telegram
+              </span>
+              <BottomGradient />
+            </Link>
+
+          </div>
+        </form>
       </div>
     </section>
   );
 }
+
+const BottomGradient = () => {
+  return (
+    <>
+      <span className="absolute inset-x-0 -bottom-px block h-px w-full bg-linear-to-r from-transparent via-cyan-500 to-transparent opacity-0 transition duration-500 group-hover/btn:opacity-100" />
+      <span className="absolute inset-x-10 -bottom-px mx-auto block h-px w-1/2 bg-linear-to-r from-transparent via-indigo-500 to-transparent opacity-0 blur-sm transition duration-500 group-hover/btn:opacity-100" />
+    </>
+  );
+};
+
+const LabelInputContainer = ({
+  children,
+  className,
+}) => {
+  return (
+    <div className={cn("flex w-full flex-col space-y-2", className)}>
+      {children}
+    </div>
+  );
+};

@@ -2,6 +2,8 @@
 import React, { useContext } from 'react'
 import { ProjectsData } from '../../Context/ProjectsData'
 import Image from 'next/image'
+import Link from 'next/link'
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 type pageParams = {
   params: Promise<{
@@ -17,8 +19,7 @@ const page = ({ params }: pageParams) => {
   const project = projectsItem.find((item: { id: string }) => { return item.id == id })
   const [thumbnail, setThumbnail] = React.useState(project.images[0]);
   const divRef = React.useRef(null);
-
-  console.log(project)
+  
   const handleMouseMove = (e) => {
     const bounds = divRef.current.getBoundingClientRect();
     setPosition({ x: e.clientX - bounds.left, y: e.clientY - bounds.top });
@@ -98,8 +99,21 @@ const page = ({ params }: pageParams) => {
             </div>
 
             <div className="text-sm w-full md:w-1/2">
-              <h1 className="text-3xl font-medium">{project.title}</h1>
-
+              <div className="text-3xl font-medium flex gap-5">
+                <h1>
+                  {project.title}
+                </h1>
+                {project.link &&
+                <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                className='flex flex-row items-center  text-blue-500 underline'
+                href={project.link}
+                >
+                <FaExternalLinkAlt size={25} />
+                </Link>
+                }
+              </div>
               <div className="flex items-center gap-0.5 mt-1">
                 {Array(5).fill('').map((_, i) => (
                   project.rating > i ? (
@@ -115,23 +129,9 @@ const page = ({ params }: pageParams) => {
                 <p className="text-base ml-2">({project.rating})</p>
               </div>
 
-              {/* <div className="mt-6">
-              <p className="text-gray-500/70 line-through">MRP: ${product.price}</p>
-              <p className="text-2xl font-medium">MRP: ${product.offerPrice}</p>
-              <span className="text-gray-500/70">(inclusive of all taxes)</span>
-            </div> */}
-
               <p className="text-base font-medium mt-6">About Product</p>
               <ul className="list-disc ml-4 text-gray-200/70 h-56 overflow-y-scroll [&::-webkit-scrollbar]:hidden" style={{ whiteSpace: "pre-line" }} >{project.description}</ul>
 
-              {/* <div className="flex items-center mt-10 gap-4 text-base">
-              <button className="w-full py-3.5 cursor-pointer font-medium bg-gray-100 text-gray-800/80 hover:bg-gray-200 transition" >
-                Add to Cart
-              </button>
-              <button className="w-full py-3.5 cursor-pointer font-medium bg-indigo-500 text-white hover:bg-indigo-600 transition" >
-                Buy now
-              </button>
-            </div> */}
             </div>
           </div>
         </div>

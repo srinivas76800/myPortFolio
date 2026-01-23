@@ -22,7 +22,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="overflow-y-scroll [&::-webkit-scrollbar]:hidden bg-[url('https://raw.githubusercontent.com/prebuiltui/prebuiltui/refs/heads/main/assets/hero/bg-gradient-2.png')] h-screen py-20 px-6 bg-gray-100 dark:bg-zinc-950">
+    <section id="about" className="overflow-y-scroll [&::-webkit-scrollbar]:hidden bg-[url('https://raw.githubusercontent.com/prebuiltui/prebuiltui/refs/heads/main/assets/hero/bg-gradient-2.png')] h-screen py-20 px-6">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
         {/* Image Section */}
         <motion.div
@@ -50,25 +50,25 @@ export default function AboutSection() {
           viewport={{ once: true }}
           className="w-full md:w-1/2"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Meet Your Devloper ✌
           </h2>
-          <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed italic ">
-            Hey there! I'm <span className="font-semibold text-black dark:text-white font-poetsen">Vivek</span>, — a full-stack web developer on a mission to build sleek, scalable, and high-performing web site's and apps. Currently working at <span className="font-semibold">Camel Q Software Solutions</span> and pursuing my MBA on the side (grind never stops, right? 😅).
+          <p className="text-gray-300 text-lg leading-relaxed italic">
+            Hey there! I'm <span className="font-semibold text-white font-poetsen">Vivek</span>, — a full-stack web developer on a mission to build sleek, scalable, and high-performing web site's and apps. Currently working at <span className="font-semibold">Camel Q Software Solutions</span> and pursuing my MBA on the side (grind never stops, right? 😅).
             <br /><br />
-            I vibe with modern tech stacks like<span className="font-semibold text-black dark:text-white"> Next.js, React.js | Tailwind CSS, Bootstrap, NetiveWind | ReactNative Expo | JavaScript, TypeScript | Node.js, Express, NestJS, and PostgreSQL.</span> From building pixel-perfect UIs to crafting scalable backend APIs, I write clean, maintainable code — and I’m all about using AI tools like GitHub Copilot and ChatGPT to work smarter, ship faster, and stay in the flow.
+            I vibe with modern tech stacks like<span className="font-semibold text-white"> Next.js, React.js | Tailwind CSS, Bootstrap, NetiveWind | ReactNative Expo | JavaScript, TypeScript | Node.js, Express, NestJS, and PostgreSQL. UI tools like Shadcn, Prebuilt ui, Spotlight and more..</span> From building pixel-perfect UIs to crafting scalable backend APIs, I write clean, maintainable code — and I’m all about using AI tools like cloud, cursor and ChatGPT to work smarter, ship faster, and stay in the flow.
             <br /><br />
             Outside of the 9-to-6 dev grind, I love leveling up my skills, shipping passion projects, and helping out with my dad’s electronics & mobile business. Whether it’s web dev or real-world hustle — I stay plugged in.
             <br /><br />
             Let's build something epic. 🚀
           </p>
-          <p className="mt-4  dark:text-gray-500">
-            Full-stack web development, Java full stack | NestJS, Node.js, Express.js, core Java | Next.js, React.js, JavaScript, TypeScript | React Native, Expo | PostgreSQL, SQL | TailwindCSS, bootstrap, NativeWind.
+          <p className="mt-4 text-gray-400">
+            Full-stack web development, MERN Stack, Front end developer, Reactjs dev, ReactNative dev | NestJS, Node.js, Express.js, core Java | Next.js, React.js, JavaScript, TypeScript | React Native, Expo | PostgreSQL, firebase, supabase | CSS, TailwindCSS, bootstrap, NativeWind. | G-sap, Framer Motion
           </p>
         </motion.div>
       </div>
 
-      <div className="overflow-hidden w-full relative max-w-5xl mx-auto select-none">
+      <div className="overflow-hidden w-full relative max-w-5xl mx-auto mt-2 select-none">
         <div className="marquee-inner flex will-change-transform min-w-[200%]" style={{ animationDuration: "15s" }}>
           <div className="flex">
             {[...companyLogos, ...companyLogos].map((company, index) => (

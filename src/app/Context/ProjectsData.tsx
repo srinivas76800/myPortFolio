@@ -19,6 +19,7 @@ export default function ProjectComponent({ children }) {
     {
       id: 0,
       title: 'Dashboads',
+      // link:'',
       rating: 4,
       images: [
         "/dashboad.png",
@@ -50,6 +51,8 @@ export default function ProjectComponent({ children }) {
     {
       id: 1,
       title: 'Tracking system',
+      // link:'',
+      rating: 4,
       images: [
         "/bustrackingsystem.png",
         "/TrainingDashboard2.png",
@@ -84,12 +87,14 @@ export default function ProjectComponent({ children }) {
     },
     {
       id: 2,
-      title: 'Apps',
+      title: 'News application',
+      link:'https://news-box-eight.vercel.app',
+      rating: 4,
       images: [
         "/news.jpg",
-        "/TrainingDashboard2.png",
-        "/TrainingDashboard3.png",
-        "/dashboad.png"
+        "/news2.jpg",
+        "/news3.jpg",
+        "/news4.jpg"
       ],
       role: 'Front end devloper',
       tools: 'React.js, Bootstrap, JavaScript, APIs',
@@ -118,11 +123,13 @@ export default function ProjectComponent({ children }) {
     {
       id: 3,
       title: 'E-commerce',
+      // link:'https://gooogle.com',
+      rating: 4,
       images: [
-        "/groceri.png",
-        "/TrainingDashboard2.png",
-        "/TrainingDashboard3.png",
-        "/dashboad.png"
+        "/groceri1.jpg",
+        "/groceri2.jpg",
+        "/groceri3.jpg",
+        "/groceri4.jpg",
       ],
       role: 'Front end devloper',
       tools: 'HTML5, css3, javaScript (ES6+)',
@@ -135,7 +142,38 @@ export default function ProjectComponent({ children }) {
     },
     {
       id: 4,
+      title: 'E-commerce',
+      // link:'https://gooogle.com',
+      rating: 4,
+      images: [
+        "/ecommerce1.jpg",
+        "/ecommerce2.jpg",
+        "/ecommerce3.jpg",
+        "/ecommerce4.jpg",
+      ],
+      role: 'Front end devloper',
+      tools: 'HTML5, css3, javaScript (ES6+), reactDOM, reactjs, Nextjs trailwindcss',
+      description: `E-Commerce Website – Product & Category Based Platform A modern e-commerce web application designed to showcase and manage products across multiple categories with a smooth and intuitive shopping experience. The platform allows users to browse products by category, view detailed product information, and interact with a clean, responsive interface optimized for all devices. The system follows real-world e-commerce patterns with scalable structure and user-friendly navigation.
+
+        Key Features
+
+        Category-based product browsing
+        Dynamic product listings with details pages
+        Clean and intuitive UI for easy navigation
+        Responsive design for mobile, tablet, and desktop
+        Search and filter products by category
+        Reusable and modular component architecture
+        Optimized performance and fast page loads
+        Scalable structure for adding new products and categories
+        Tech Stack (example – adjust if needed)
+        Frontend: HTML, CSS, JavaScript / React / Next.js
+        Styling: Bootstrap / Tailwind CSS`
+    },
+    {
+      id: 5,
       title: 'Tracking system (Mobile application)',
+      // link:'https://gooogle.com',
+      rating: 4,
       images: [
         "/trackingapp.jpg",
         "/TrainingDashboard2.png",
@@ -172,8 +210,10 @@ export default function ProjectComponent({ children }) {
         Tools & Concepts: Real-time systems, event-driven architecture, scalable APIs`
     },
     {
-      id: 5,
+      id: 6,
       title: 'Ai Notes App (Mobile application)',
+      // link:'https://gooogle.com',
+      rating: 4,
       images: [
         "/notes.ai.jpeg",
         "/TrainingDashboard2.png",
@@ -205,8 +245,10 @@ export default function ProjectComponent({ children }) {
         Notifications & Sync: Real-time updates and device sync`
     },
     {
-      id: 6,
+      id: 7,
       title: 'Company websites',
+      // link:'https://gooogle.com',
+      rating: 4,
       images: [
         "/companysite.jpg",
         "/TrainingDashboard2.png",
@@ -219,8 +261,10 @@ export default function ProjectComponent({ children }) {
 
     },
     {
-      id: 7,
+      id: 8,
       title: 'Static landing pages',
+      // link:'https://gooogle.com',
+      rating: 4,
       images: [
         "/Staticlandingpages1.jpg",
         "/TrainingDashboard2.png",
