@@ -73,7 +73,7 @@ const page = ({ params }: pageParams) => {
               </div>
 
               <div className="border border-gray-500/30 max-w-100 bg-white rounded overflow-hidden">
-                <span className="absolute px-2 py-1 z-10 whitespace-nowrap text-sm rounded bg-white/20 border border-gray-200 backdrop-blur-[4px] text-gray-900 font-medium pointer-events-none"
+                <span className="absolute px-2 py-1 z-10 whitespace-nowrap text-sm rounded bg-white/20 border border-gray-200 backdrop-blur-xs text-gray-900 font-medium pointer-events-none"
                   style={{
                     top: position.y + 50,
                     left: position.x + 180,

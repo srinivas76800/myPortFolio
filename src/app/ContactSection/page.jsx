@@ -177,7 +177,7 @@ export default function ContactSection() {
 
           <div className="my-5 h-px w-full bg-linear-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
 
-          <div className="flex flex-row justify-evenly gap-5 space-y-4">
+          <div className="gap-5 space-y-4 overflow-hidden">
 
             <Link
               className="group/btn hover:-rotate-2 transition-all shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-white px-4 font-medium text-black dark:shadow-[0px_0px_1px_1px_#262626]"
