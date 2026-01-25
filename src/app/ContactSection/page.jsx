@@ -34,7 +34,7 @@ export default function ContactSection() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.firstname || !formData.lastname || !formData.email || !formData.message) { return setStatus('fill all filds to contact back you!') }
+    if (!formData.firstname || !formData.lastname || !formData.email || !formData.message) { return setStatus('Missing filds!') }
     setStatus("Sending...");
     try {
       const res = await fetch("/api/send", {
@@ -126,7 +126,7 @@ export default function ContactSection() {
           ></textarea>
           <div
             className="rainbow mt-8 font-bold relative z-0 bg-white/15 overflow-hidden p-0.5 flex items-center justify-center rounded-full hover:scale-105 transition duration-300 active:scale-100">
-            <button onSubmit={handleSubmit} className="px-8 w-full text-sm py-3 text-white rounded-full font-medium bg-black backdrop-blur">
+            <button onSubmit={handleSubmit} className="px-8 w-full text-sm py-3 text-white rounded-full font-medium bg-white backdrop-blur">
               Let's Build Something Cool
             </button>
           </div>
@@ -138,7 +138,7 @@ export default function ContactSection() {
           </p>
         )}
       </div> */}
-      <div className="bg-black/50 mx-auto w-full max-w-3xl rounded-none bg-back p-4 md:rounded-2xl md:p-8">
+      <div className="bg-black/40 mx-auto w-full max-w-3xl rounded-none bg-back p-4 md:rounded-2xl md:p-8">
         <h2 className="text-xl text-center font-extrabold text-white">
           Let&apos;s Work Together
         </h2>
@@ -165,60 +165,55 @@ export default function ContactSection() {
           </LabelInputContainer>
           <LabelInputContainer className="mb-4">
             <Label htmlFor="text">Message</Label>
-            <Input className='h-15' name="message" onChange={handleChange} id="text" value={formData.message} placeholder="Your Massage here.." type="text" />
+            <Input className='h-20' name="message" onChange={handleChange} id="text" value={formData.message} placeholder="Your Massage here.." type="text" />
           </LabelInputContainer>
           <button
             className="group/btn relative block h-10 w-full rounded-md bg-linear-to-br from-black to-neutral-600 font-medium text-white "
             type="submit"
           >
-            {status ? status : 'Sign up -->'}
+            {status ? status : 'send message -->'}
             <BottomGradient />
           </button>
 
           <div className="my-5 h-px w-full bg-linear-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
 
-          <div className="flex flex-col space-y-4">
-
+          <div className="flex flex-row justify-evenly gap-5 space-y-4">
 
             <Link
-              className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-4 font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
+              className="group/btn hover:-rotate-2 transition-all shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-white px-4 font-medium text-black dark:shadow-[0px_0px_1px_1px_#262626]"
               href={'https://github.com/srinivas76800'}
             >
-              <IconBrandGithub className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-              <span className="text-sm text-neutral-700 dark:text-neutral-300">
+              <IconBrandGithub className="h-4 w-4" />
+              <span className="text-sm">
                 GitHub
               </span>
-              <BottomGradient />
             </Link>
             <Link
-              className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-4 font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
+              className="group/btn hover:-rotate-2 transition-all shadow-input relative flex h-10 w-full  items-center justify-start space-x-2 rounded-md bg-white px-4 font-medium text-black dark:shadow-[0px_0px_1px_1px_#262626]"
               href={'https://www.linkedin.com/in/vemunuri-vivek-d15m02y2004'}
             >
-              <IconBrandLinkedin className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-              <span className="text-sm text-neutral-700 dark:text-neutral-300">
+              <IconBrandLinkedin className="h-4 w-4" />
+              <span className="text-sm">
                 Linkedin
               </span>
-              <BottomGradient />
             </Link>
             <Link
-              className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-4 font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
+              className="group/btn hover:-rotate-2 transition-all shadow-input relative flex h-10 w-full  items-center justify-start space-x-2 rounded-md bg-white px-4 font-medium text-black dark:shadow-[0px_0px_1px_1px_#262626]"
               href={'mailto:srinivasvemunuri8@gmail.com?subject=Hello&body=I want to contact you'}
             >
-              <IconBrandGmail className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-              <span className="text-sm text-neutral-700 dark:text-neutral-300">
+              <IconBrandGmail className="h-4 w-4" />
+              <span className="text-sm">
                 E-mail
               </span>
-              <BottomGradient />
             </Link>
             <Link
-              className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-4 font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
+              className="group/btn hover:-rotate-2 transition-all shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-white px-4 font-medium text-black dark:shadow-[0px_0px_1px_1px_#262626]"
               href={'https://t.me/mrVemunuri02?text=Hello%20I%20am%20contacting%20you%20from%20your%20portfolio'}
             >
-              <IconBrandTelegram className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-              <span className="text-sm text-neutral-700 dark:text-neutral-300">
+              <IconBrandTelegram className="h-4 w-4" />
+              <span className=" text-sm">
                 Telegram
               </span>
-              <BottomGradient />
             </Link>
 
           </div>
@@ -236,6 +231,14 @@ const BottomGradient = () => {
     </>
   );
 };
+// const LinkGradient = () => {
+//   return (
+//     <>
+//       <span className="absolute inset-x-0 -bottom-px block h-full w-full bg-linear-to-r from-transparent via-[#4f97d1] to-transparent opacity-0 transition duration-500 group-hover/btn:opacity-100" />
+//       <span className="absolute inset-x-10 -bottom-px mx-auto block h-px w-1/2 bg-linear-to-r from-transparent via-[#5ea8d6] to-transparent opacity-0 blur-sm transition duration-500 group-hover/btn:opacity-100" />
+//     </>
+//   );
+// };
 
 const LabelInputContainer = ({
   children,

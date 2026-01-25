@@ -9,13 +9,14 @@ import Drag from "../Components/Pointer"
 import { SplitText } from 'gsap/all';
 import { ContainerTextFlip } from '@/src/components/ui/container-text-flip';
 import { EncryptedText } from "@/src/components/ui/encrypted-text";
+import { BackgroundBeamsWithCollision } from '@/src/components/ui/background-beams-with-collision';
 
 export default function HeroSection() {
   const [open, setOpen] = useState(false);
   const navRef = useRef(null)
 
   return (
-    <section className="relative h-full w-full bg-black text-white overflow-hidden rounded-b-4xl" style={{ cursor: '' }}>
+    <BackgroundBeamsWithCollision className="py-5 text-white relative h-screen w-full overflow-hidden rounded-b-4xl flex flex-col justify-between">
       {/* navbar navigation */}
       <Link
         href='/FullScreenNav'
@@ -47,8 +48,8 @@ export default function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 h-full">
-        <div className="relative z-20 flex flex-col items-end mt-30  text-end px-2">
+      <div className="relative z-20 h-full mt-20">
+        <div className="relative z-20 flex flex-col items-end text-end px-2">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -76,42 +77,43 @@ export default function HeroSection() {
             transition={{ delay: 0.5, duration: 1 }}
             className="mt-3 text-gray-100 text-sm sm:text-md md:text-xl lg:text-2xl max-w-2xl"
           >
-            <ContainerTextFlip size="phone" interval={2000} words={["Full stack", "ReactJs", "ReactNative", "Express", "NodeJs"]} /> {" "}
-            Developer who writes clean, efficient code and builds high-performance applications. I love blending creativity with logic crafting intuitive, pixel-perfect UIs and developing robust backend systems that just work.<br/>
+            <ContainerTextFlip size="phone" interval={2000} words={["Full stack", "ReactJs", "ReactNative", "ExpressJs", "NodeJs"]} /> {" "}
+            Developer who writes clean, efficient code and builds high-performance applications. I love blending creativity with logic crafting intuitive, pixel-perfect UIs and developing robust backend systems that just work.<br />
             <EncryptedText
               text=" — Turning ideas into seamless digital experiences is what I do best."
               encryptedClassName="text-neutral-500"
               revealedClassName="dark:text-white text-white"
-              revealDelayMs={50}
+              revealDelayMs={80}
               className='text-white'
             />
 
           </motion.div>
         </div>
 
-        <div className='w-screen h-50 my-5 flex justify-end items-end sm:gap-5 md:gap-8'>
-          <Link
-            href={'/Projects'}
-            className='group overflow-hidden transition-all ease-in bg-white/15 border-gray-500 rounded-full px-0.5 py-0.5 text-3xl w-full text-center mx-5'
-          >
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl h-FULL px-8 py-3 text-white group-hover:bg-black rounded-full font-medium backdrop-blur ">
-              <span className="block transition-transform duration-300 group-hover:-translate-x-[150%]">PROJECTS</span>
-              <span className="absolute w-full top-full left-1/2 -translate-x-1/2 block transition-transform duration-300 group-hover:translate-y-[-140%]">CLICK ME</span>
-            </p>
-          </Link>
-
-          <Link
-            href="/ContactSection"
-            className="group rainbow bg-white/15 overflow-hidden font-bold ease-in relative z-0 border-gray-500 rounded-full px-0.5 py-0.5 text-3xl w-full text-center mx-5"
-          >
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl h-FULL px-8 py-3 text-white bg-black rounded-full font-medium ck backdrop-blur ">
-              <span className="block transition-transform duration-300 group-hover:-translate-x-[150%]">Contack me!</span>
-              <span className="absolute w-full top-full left-1/2 -translate-x-1/2 block transition-transform duration-300 group-hover:translate-y-[-140%]">Let's Build Something Cool</span>
-            </p>
-          </Link>
-        </div>
 
       </div>
-    </section >
+      {/* btn */}
+      <div className='w-screen h-50 my-5 flex justify-end items-end sm:gap-5 md:gap-8'>
+        <Link
+          href={'/Projects'}
+          className='group overflow-hidden transition-all ease-in bg-white/15 border-gray-900 rounded-full px-0.5 py-0.5 text-3xl w-full text-center mx-5'
+        >
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl h-FULL px-8 py-3 text-white group-hover:bg-black rounded-full font-medium backdrop-blur ">
+            <span className="block transition-transform duration-300 group-hover:-translate-x-[150%]">PROJECTS</span>
+            <span className="absolute w-full top-full left-1/2 -translate-x-1/2 block transition-transform duration-300 group-hover:translate-y-[-140%]">CLICK ME</span>
+          </p>
+        </Link>
+
+        <Link
+          href="/ContactSection"
+          className="group rainbow bg-white/15 overflow-hidden font-bold ease-in relative z-0 border-gray-500 rounded-full px-0.5 py-0.5 text-3xl w-full text-center mx-5"
+        >
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl h-FULL px-8 py-3 text-white bg-black rounded-full font-medium ck backdrop-blur ">
+            <span className="block transition-transform duration-300 group-hover:-translate-x-[150%]">Contack me!</span>
+            <span className="absolute w-full top-full left-1/2 -translate-x-1/2 block transition-transform duration-300 group-hover:translate-y-[-140%]">Let's Build Something Cool</span>
+          </p>
+        </Link>
+      </div>
+    </BackgroundBeamsWithCollision >
   );
 }

@@ -39,10 +39,10 @@ export default function PortfolioSection() {
               viewport={{ once: true }}
               className="rounded-4xl shadow-lg group"
             >
-              <div className="group rounded-4xl w-full h-64 mx-auto [perspective:1000px]">
-                <div className="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+              <div className="group rounded-4xl w-full h-64 mx-auto perspective-[1000px]">
+                <div className="relative w-full h-full transition-transform duration-500 transform-3d group-hover:transform-[rotateY(180deg)]">
 
-                  <div className='absolute px-5 w-full h-full [backface-visibility:hidden] bg-white flex items-center justify-center rounded-2xl '>
+                  <div className='absolute px-5 w-full h-full backface-hidden bg-white flex items-center justify-center rounded-2xl '>
                     <img
                       src={item.images[0]}
                       alt={item.title}
@@ -52,9 +52,10 @@ export default function PortfolioSection() {
                     <p className='fixed h-10 bottom-0 left-0 right-0 text-black font-extrabold'>{item.title}</p>
                   </div>
 
-                  <div className="absolute w-full h-full [backface-visibility:hidden] px-3 flex flex-col justify-center rounded-2xl bg-white/30 text-white [transform:rotateY(180deg)]">
+                  <div className="absolute w-full h-full backface-hidden px-3 flex flex-col justify-center rounded-2xl bg-white/30 text-white transform-[rotateY(180deg)]">
                     <p className="text-white text-lg font-bold">Role : {item.role}</p>
                     <p className="text-white text-md font-semibold">Tools : {item.tools}</p>
+                    {item.link? (<Link href={item.link} className='absolute px-5 py-5 bottom-0 left-0 text-black underline text-sm font-extrabold cursor-pointer'>Live link... </Link>):''}
                     <Link href={`/Projects/${index}`} className='absolute px-5 py-5 bottom-0 right-0 text-black underline text-sm font-extrabold cursor-pointer'>View More... </Link>
                   </div>
                 </div>
