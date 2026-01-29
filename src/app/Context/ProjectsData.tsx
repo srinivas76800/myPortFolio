@@ -14,10 +14,53 @@ export default function ProjectComponent({ children }) {
   const nestjs = "https://ih1.redbubble.net/image.1084299841.8155/tst,small,507x507-pad,600x600,f8f8f8.jpg"
   const reactNative = "https://images-cdn.openxcell.com/wp-content/uploads/2024/07/25082439/reactnative-inner.svg"
   const framerMotion = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwrNikmpK8Ebm4saB_9ajuoH-UUY_JXK1RWg&s"
-  
+
   const projectsItem = [
     {
       id: 0,
+      title: 'Backend logics',
+      link: 'https://pastbin-frontend.vercel.app',
+      rating: 3,
+      images: [
+        "/pastbin1.png",
+        "/pastbin2.png",
+        "/pastbin3.png",
+        "/pastbin4.png"
+      ],
+      role: 'Full stack devloper',
+      tools: 'Next.js React.js, Nest.js, ExpressJs, ShadCn UI, TrailwindCSS, TypeScript',
+      description: `Pastebin Clone – Full Stack Web Application
+
+        A secure and lightweight Pastebin-style web application that allows users to create, store, and share text snippets through unique, time-limited links. Built with a modern full-stack architecture, the platform focuses on simplicity, performance, and data security while handling real-world use cases like content expiration and view tracking.
+
+        Key Features
+
+        Create and share text snippets via unique URLs
+
+        Time-based expiration for shared content
+
+        View count tracking with usage limits
+
+        Secure backend APIs for data handling
+
+        Automatic deletion of expired content
+
+        Clean and responsive user interface
+
+        Error handling for expired or invalid links
+
+        Scalable and modular backend architecture
+
+        Tech Stack
+
+        Frontend: Next.js / React, Tailwind CSS
+        Backend: NestJS, Node.js
+        Database: PostgreSQL (with Drizzle ORM)
+        APIs: REST APIs
+        Deployment: Vercel (frontend), Railway (backend)`
+    },
+    {
+      id: 1,
       title: 'Dashboads',
       // link:'',
       rating: 4,
@@ -49,7 +92,7 @@ export default function ProjectComponent({ children }) {
         Next.js, React.js, JavaScript/TypeScript, Tailwind CSS / Bootstrap, REST APIs`
     },
     {
-      id: 1,
+      id: 2,
       title: 'Tracking system',
       // link:'',
       rating: 4,
@@ -86,9 +129,9 @@ export default function ProjectComponent({ children }) {
         Auth & Messaging: JWT, OTP, NodeMailer`
     },
     {
-      id: 2,
+      id: 3,
       title: 'News application',
-      link:'https://news-box-eight.vercel.app',
+      link: 'https://news-box-eight.vercel.app',
       rating: 4,
       images: [
         "/news.jpg",
@@ -121,7 +164,7 @@ export default function ProjectComponent({ children }) {
         APIs: News APIs for dynamic content`
     },
     {
-      id: 3,
+      id: 4,
       title: 'E-commerce',
       // link:'https://gooogle.com',
       rating: 4,
@@ -141,7 +184,7 @@ export default function ProjectComponent({ children }) {
         Key Features: Responsive design, clean UI, product listing, interactive elements`
     },
     {
-      id: 4,
+      id: 5,
       title: 'E-commerce',
       // link:'https://gooogle.com',
       rating: 4,
@@ -170,7 +213,7 @@ export default function ProjectComponent({ children }) {
         Styling: Bootstrap / Tailwind CSS`
     },
     {
-      id: 5,
+      id: 6,
       title: 'Tracking system (Mobile application)',
       // link:'https://gooogle.com',
       rating: 4,
@@ -210,7 +253,7 @@ export default function ProjectComponent({ children }) {
         Tools & Concepts: Real-time systems, event-driven architecture, scalable APIs`
     },
     {
-      id: 6,
+      id: 7,
       title: 'Ai Notes App (Mobile application)',
       // link:'https://gooogle.com',
       rating: 4,
@@ -245,7 +288,7 @@ export default function ProjectComponent({ children }) {
         Notifications & Sync: Real-time updates and device sync`
     },
     {
-      id: 7,
+      id: 8,
       title: 'Company websites',
       // link:'https://gooogle.com',
       rating: 4,
@@ -261,7 +304,7 @@ export default function ProjectComponent({ children }) {
 
     },
     {
-      id: 8,
+      id: 9,
       title: 'Static landing pages',
       // link:'https://gooogle.com',
       rating: 4,
