@@ -5,7 +5,6 @@ import AboutSection from "./AboutSection/page";
 import ContactSection from "./ContactSection/page";
 import ScrollTriggered from "./Skills/page";
 import PortfolioSection from "./Projects/page";
-import TestimonialsSection from "./Components/TestimonialsSection";
 import Drag from "./Components/Pointer"
 
 const HomeScreen = () => {
@@ -13,10 +12,9 @@ const HomeScreen = () => {
         <div className=" overflow-hidden">
             <HeroSection />
             {/* <Drag /> */}
-            {/* <PortfolioSection /> */}
-            {/* <AboutSection /> */}
+            <AboutSection />
+            <PortfolioSection />
             {/* <ScrollTriggered /> */}
-            {/* <TestimonialsSection /> */}
             {/* <ContactSection /> */}
             <Footer />
         </div>

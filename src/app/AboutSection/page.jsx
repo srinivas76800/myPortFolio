@@ -22,7 +22,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="overflow-y-scroll [&::-webkit-scrollbar]:hidden bg-[url('https://raw.githubusercontent.com/prebuiltui/prebuiltui/refs/heads/main/assets/hero/bg-gradient-2.png')] h-screen py-20 px-6">
+    <section id="about" className=" bg-[url('https://raw.githubusercontent.com/prebuiltui/prebuiltui/refs/heads/main/assets/hero/bg-gradient-2.png')] h-full py-20 px-6">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
         {/* Image Section */}
         <motion.div
@@ -35,9 +35,9 @@ export default function AboutSection() {
 
           <div className="overflow-hidden rounded-3xl shadow-lg group">
             <img
-              src="/edit.jpg"
+              src="/profilePic.jpeg"
               alt="Photographer"
-              className="w-full object-cover transition-transform duration-700 group-hover:scale-105"
+              className="w-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
           </div>
         </motion.div>
@@ -54,7 +54,7 @@ export default function AboutSection() {
             Meet Your Devloper ✌
           </h2>
           <p className="text-gray-300 text-lg leading-relaxed italic">
-            Hey there! I'm <span className="font-semibold text-white font-poetsen">Vivek</span>, — a full-stack web developer on a mission to build sleek, scalable, and high-performing web site's and apps. Currently working at <span className="font-semibold">Camel Q Software Solutions</span> and pursuing my MBA on the side (grind never stops, right? 😅).
+            Hey there! I'm <span className="font-semibold text-white font-poetsen">Vivek</span>, — a full-stack web developer on a mission to build sleek, scalable, and high-performing, Production ready web site's and apps. Currently working at <span className="font-semibold">Camel Q Software Solutions</span> and pursuing my MBA on the side (grind never stops, right? 😅).
             <br /><br />
             I vibe with modern tech stacks like<span className="font-semibold text-white"> Next.js, React.js | Tailwind CSS, Bootstrap, NetiveWind | ReactNative Expo | JavaScript, TypeScript | Node.js, Express, NestJS, and PostgreSQL. UI tools like Shadcn, Prebuilt ui, Spotlight and more..</span> From building pixel-perfect UIs to crafting scalable backend APIs, I write clean, maintainable code — and I’m all about using AI tools like cloud, cursor and ChatGPT to work smarter, ship faster, and stay in the flow.
             <br /><br />
@@ -63,7 +63,7 @@ export default function AboutSection() {
             Let's build something epic. 🚀
           </p>
           <p className="mt-4 text-gray-400">
-            Full-stack web development, MERN Stack, Front end developer, Reactjs dev, ReactNative dev | NestJS, Node.js, Express.js, core Java | Next.js, React.js, JavaScript, TypeScript | React Native, Expo | PostgreSQL, firebase, supabase | CSS, TailwindCSS, bootstrap, NativeWind. | G-sap, Framer Motion
+            Full-stack web development, MERN Stack, Front end developer, Reactjs dev, React Native dev | Node.js, Express.js, NestJS | Next.js, React.js, JavaScript, TypeScript | React Native, Expo | PostgreSQL, firebase, supabase | CSS, shadcn, pribuld ui, TailwindCSS, bootstrap, NativeWind. | G-sap, Framer Motion
           </p>
         </motion.div>
       </div>

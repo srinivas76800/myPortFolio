@@ -13,6 +13,7 @@ import {
   IconBrandGithub,
   IconBrandGmail,
   IconBrandGoogle,
+  IconBrandInstagram,
   IconBrandLinkedin,
   IconBrandOnlyfans,
   IconBrandTelegram,
@@ -177,10 +178,10 @@ export default function ContactSection() {
 
           <div className="my-5 h-px w-full bg-linear-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
 
-          <div className="gap-5 space-y-4 overflow-hidden">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 space-y-4">
 
             <Link
-              className="group/btn hover:-rotate-2 transition-all shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-white px-4 font-medium text-black dark:shadow-[0px_0px_1px_1px_#262626]"
+              className="group/btn hover:-rotate-1 transition-all shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-white px-4 font-medium text-black dark:shadow-[0px_0px_1px_1px_#262626]"
               href={'https://github.com/srinivas76800'}
             >
               <IconBrandGithub className="h-4 w-4" />
@@ -189,7 +190,7 @@ export default function ContactSection() {
               </span>
             </Link>
             <Link
-              className="group/btn hover:-rotate-2 transition-all shadow-input relative flex h-10 w-full  items-center justify-start space-x-2 rounded-md bg-white px-4 font-medium text-black dark:shadow-[0px_0px_1px_1px_#262626]"
+              className="group/btn hover:-rotate-2 transition-all shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-white px-4 font-medium text-black dark:shadow-[0px_0px_1px_1px_#262626]"
               href={'https://www.linkedin.com/in/vemunuri-vivek-d15m02y2004'}
             >
               <IconBrandLinkedin className="h-4 w-4" />
@@ -198,12 +199,12 @@ export default function ContactSection() {
               </span>
             </Link>
             <Link
-              className="group/btn hover:-rotate-2 transition-all shadow-input relative flex h-10 w-full  items-center justify-start space-x-2 rounded-md bg-white px-4 font-medium text-black dark:shadow-[0px_0px_1px_1px_#262626]"
+              className="group/btn hover:-rotate-2 transition-all shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-white px-4 font-medium text-black dark:shadow-[0px_0px_1px_1px_#262626]"
               href={'mailto:srinivasvemunuri8@gmail.com?subject=Hello&body=I want to contact you'}
             >
               <IconBrandGmail className="h-4 w-4" />
               <span className="text-sm">
-                E-mail
+                Mail
               </span>
             </Link>
             <Link
@@ -213,6 +214,15 @@ export default function ContactSection() {
               <IconBrandTelegram className="h-4 w-4" />
               <span className=" text-sm">
                 Telegram
+              </span>
+            </Link>
+            <Link
+              className="group/btn hover:-rotate-2 transition-all shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-white px-4 font-medium text-black dark:shadow-[0px_0px_1px_1px_#262626]"
+              href={'https://www.instagram.com/mr_vemunuri_02?igsh=NjV4MjF4eGgxdmp5'}
+            >
+              <IconBrandInstagram className="h-4 w-4" />
+              <span className=" text-sm">
+                Instagram
               </span>
             </Link>
 
