@@ -2,6 +2,7 @@ import "./globals.css";
 import Stairs from "./Components/Stairs";
 import ProjectComponent from "./Context/ProjectsData";
 import { SpeedInsights } from "@vercel/speed-insights/next"// app performance checker by vercal
+import CustomCursor from "./Components/CustomCursor";
 
 export const metadata = {
   title: "vivek -portfolio",
@@ -23,7 +24,11 @@ export default function RootLayout({ children }) {
         className={`antialiased bg-[#121212]`}
       >
         <ProjectComponent>
-          <Stairs>{children}</Stairs>
+          {/* <Drag /> */}
+          <CustomCursor/>
+          <Stairs>
+            {children}
+          </Stairs>
           <SpeedInsights />
         </ProjectComponent>
       </body>
