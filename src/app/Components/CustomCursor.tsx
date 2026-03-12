@@ -6,15 +6,15 @@ import { useEffect, useState } from "react"
 export default function CustomCursor() {
   const x = useSpring(0, { stiffness: 120, damping: 20 })
   const y = useSpring(0, { stiffness: 120, damping: 20 })
-  // const [isTouch, setIsTouch] = useState(false)
+  const [enabled, setEnabled] = useState(false)
   const [isHovering, setIsHovering] = useState(false)
 
   useEffect(() => {
-    // const touchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0
+    const hasMouse = window.matchMedia("(hover: hover) and (pointer: fine)").matches
+    setEnabled(hasMouse)
 
-    // setIsTouch(touchDevice)
+    if (!hasMouse) return
 
-    // if (touchDevice) return
     const moveCursor = (e: MouseEvent) => {
       x.set(e.clientX - 25)
       y.set(e.clientY - 25)
@@ -28,20 +28,25 @@ export default function CustomCursor() {
     hoverElements.forEach((el) => {
       el.addEventListener("mouseenter", handleEnter)
       el.addEventListener("mouseleave", handleLeave)
+      
     })
 
     window.addEventListener("mousemove", moveCursor)
 
     return () => {
       window.removeEventListener("mousemove", moveCursor)
+      window.addEventListener("mousemove", moveCursor)
 
       hoverElements.forEach((el) => {
         el.removeEventListener("mouseenter", handleEnter)
         el.removeEventListener("mouseleave", handleLeave)
       })
+      window.removeEventListener("mousemove", moveCursor)
     }
+
   }, [x, y])
-  // if (isTouch) return null   // ⭐ hide cursor on phones
+  
+  if (!enabled) return null   // ⭐ hide cursor on phones
 
   return (
     <motion.div

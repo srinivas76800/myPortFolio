@@ -19,7 +19,7 @@ const page = ({ params }: pageParams) => {
   const project = projectsItem.find((item: { id: string }) => { return item.id == id })
   const [thumbnail, setThumbnail] = React.useState(project.images[0]);
   const divRef = React.useRef(null);
-  
+
   const handleMouseMove = (e) => {
     const bounds = divRef.current.getBoundingClientRect();
     setPosition({ x: e.clientX - bounds.left, y: e.clientY - bounds.top });
@@ -66,7 +66,7 @@ const page = ({ params }: pageParams) => {
             <div className="flex gap-3">
               <div className="flex flex-col gap-3">
                 {project.images.map((image: string, index: number) => (
-                  <div key={index} onClick={() => setThumbnail(image)} className="border max-w-24 border-gray-500/30 rounded overflow-hidden cursor-pointer" >
+                  <div key={index} onClick={() => setThumbnail(image)} className="border max-w-24 border-gray-500/30 rounded overflow-hidden" >
                     <Image className='object-center' width={400} height={400} src={image} alt={`Thumbnail ${index + 1}`} />
                   </div>
                 ))}
@@ -104,14 +104,14 @@ const page = ({ params }: pageParams) => {
                   {project.title}
                 </h1>
                 {project.link &&
-                <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                className='flex flex-row items-center  text-blue-500 underline'
-                href={project.link}
-                >
-                <FaExternalLinkAlt size={25} />
-                </Link>
+                  <Link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className='flex flex-row items-center  text-blue-500 underline'
+                    href={project.link}
+                  >
+                    <FaExternalLinkAlt size={25} />
+                  </Link>
                 }
               </div>
               <div className="flex items-center gap-0.5 mt-1">
@@ -139,14 +139,17 @@ const page = ({ params }: pageParams) => {
       <section className="flex flex-col items-center justify-center mt-3 px-4 md:px-0 w-full">
         <h3 className="text-lg font-semibold text-white text-center">Teck Stack used -</h3>
         <div className="max-w-4xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 w-full mt-5">
-          <div className="bg-gray-100 p-4 h-15 grid place-content-center rounded-md hover:-rotate-2 transition duration-200">
-            <Image width={50} height={50} src="https://images-cdn.openxcell.com/wp-content/uploads/2024/07/25082439/reactnative-inner.svg" alt="Logo" />
-          </div>
+          {/* {project.skills.map((item) => { console.log(item) })} */}
+          {project.skills.map((item) => {
+            // <div key={id} className="bg-gray-100 p-4 h-15 grid place-content-center rounded-md hover:-rotate-2 transition duration-200">
+            //   <Image width={50} height={50} src={`${item}`} alt="Logo" />
           <div className="bg-gray-100 p-4 h-15 grid place-content-center rounded-md hover:-rotate-2 transition duration-200">
             <img src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/companyLogo/airtable.svg"
               alt="Logo" />
           </div>
-          <div className="bg-gray-100 p-4 h-15 grid place-content-center rounded-md hover:-rotate-2 transition duration-200">
+            // </div>
+          })}
+          {/* <div className="bg-gray-100 p-4 h-15 grid place-content-center rounded-md hover:-rotate-2 transition duration-200">
             <img src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/companyLogo/miro.svg"
               alt="Logo" />
           </div>
@@ -161,7 +164,7 @@ const page = ({ params }: pageParams) => {
           <div className="bg-gray-100 p-4 h-15 grid place-content-center rounded-md hover:-rotate-2 transition duration-200">
             <img src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/companyLogo/asana.svg"
               alt="Logo" />
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

@@ -21,6 +21,7 @@ export default function ProjectComponent({ children }) {
       title: 'Backend logics',
       link: 'https://pastbin-frontend.vercel.app',
       rating: 3,
+      skills:[html,css,javaScript,TypeScript,Reactjs,nextjs],
       images: [
         "/pastbin1.png",
         "/pastbin2.png",
@@ -64,6 +65,7 @@ export default function ProjectComponent({ children }) {
       title: 'Dashboads',
       // link:'',
       rating: 4,
+      skills:[html,css,javaScript,TypeScript,Reactjs,nextjs],
       images: [
         "/dashboad.png",
         "/TrainingDashboard2.png",
@@ -96,6 +98,7 @@ export default function ProjectComponent({ children }) {
       title: 'Tracking system',
       // link:'',
       rating: 4,
+      skills:[html,css,javaScript,TypeScript,Reactjs,nextjs],
       images: [
         "/bustrackingsystem.png",
         "/TrainingDashboard2.png",
@@ -133,6 +136,7 @@ export default function ProjectComponent({ children }) {
       title: 'News application',
       link: 'https://news-box-eight.vercel.app',
       rating: 4,
+      skills:[html,css,javaScript,TypeScript,Reactjs,nextjs],
       images: [
         "/news.jpg",
         "/news2.jpg",
@@ -168,6 +172,7 @@ export default function ProjectComponent({ children }) {
       title: 'E-commerce',
       // link:'https://gooogle.com',
       rating: 4,
+      skills:[html,css,javaScript,TypeScript,Reactjs,nextjs],
       images: [
         "/groceri1.jpg",
         "/groceri2.jpg",
@@ -186,8 +191,9 @@ export default function ProjectComponent({ children }) {
     {
       id: 5,
       title: 'E-commerce',
-      // link:'https://gooogle.com',
+      link:'https://github.com/srinivas76800/E-commerce.git',
       rating: 4,
+      skills:[html,css,javaScript,TypeScript,Reactjs,nextjs],
       images: [
         "/ecommerce1.jpg",
         "/ecommerce2.jpg",
@@ -215,8 +221,9 @@ export default function ProjectComponent({ children }) {
     {
       id: 6,
       title: 'Tracking system (Mobile application)',
-      // link:'https://gooogle.com',
+      link:'https://github.com/Bus-Tracking-Project/bussTrackingSystem-frontend.git',
       rating: 4,
+      skills:[html,css,javaScript,TypeScript,Reactjs,nextjs],
       images: [
         "/trackingapp.jpg",
         "/TrainingDashboard2.png",
@@ -255,8 +262,9 @@ export default function ProjectComponent({ children }) {
     {
       id: 7,
       title: 'Ai Notes App (Mobile application)',
-      // link:'https://gooogle.com',
+      link:'https://github.com/srinivas76800/ai-frontend.git',
       rating: 4,
+      skills:[html,css,javaScript,TypeScript,Reactjs,nextjs],
       images: [
         "/notes.ai.jpeg",
         "/TrainingDashboard2.png",
@@ -292,6 +300,7 @@ export default function ProjectComponent({ children }) {
       title: 'Company websites',
       // link:'https://gooogle.com',
       rating: 4,
+      skills:[html,css,javaScript,TypeScript,Reactjs,nextjs],
       images: [
         "/companysite.jpg",
         "/TrainingDashboard2.png",
@@ -308,6 +317,7 @@ export default function ProjectComponent({ children }) {
       title: 'Static landing pages',
       // link:'https://gooogle.com',
       rating: 4,
+      skills:[html,css,javaScript,TypeScript,Reactjs,nextjs],
       images: [
         "/Staticlandingpages1.jpg",
         "/TrainingDashboard2.png",

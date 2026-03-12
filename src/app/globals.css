@@ -14,6 +14,9 @@
   body {
     cursor: none;
   }
+  * {
+    cursor: none !important;
+  }
 }
 body {
   font-family: 'Karla', sans-serif;

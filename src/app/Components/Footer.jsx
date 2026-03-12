@@ -70,7 +70,7 @@ export default function Footer() {
               <a
                 href={`mailto:srinivasvemunuri8@gmail.com
                   ?subject=Hiring%20Inquiry
-                  &body=Hi%20Srinivas,%0A%0AI%20checked%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity.%0A%0AThanks`}
+                  &body=Hi%20Vivek,%0A%0AI%20checked%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity.%0A%0AThanks`}
               >
                 Hire Me
               </a>

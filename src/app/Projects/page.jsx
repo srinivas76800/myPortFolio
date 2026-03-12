@@ -55,8 +55,8 @@ export default function PortfolioSection() {
                   <div className="absolute w-full h-full backface-hidden px-3 flex flex-col justify-center rounded-2xl bg-white/30 text-white transform-[rotateY(180deg)]">
                     <p className="text-white text-lg font-bold">Role : {item.role}</p>
                     <p className="text-white text-md font-semibold">Tools : {item.tools}</p>
-                    {item.link? (<Link href={item.link} className='absolute px-5 py-5 bottom-0 left-0 text-black underline text-sm font-extrabold cursor-pointer'>Live link... </Link>):''}
-                    <Link href={`/Projects/${index}`} className='absolute px-5 py-5 bottom-0 right-0 text-black underline text-sm font-extrabold cursor-pointer'>View More... </Link>
+                    {item.link? (<Link href={item.link} className='absolute px-5 py-5 bottom-0 left-0 text-white underline text-sm font-extrabold cursor-pointer'>link... </Link>):''}
+                    <Link href={`/Projects/${index}`} className='absolute px-5 py-5 bottom-0 right-0 text-white underline text-sm font-extrabold cursor-pointer'>View More... </Link>
                   </div>
                 </div>
               </div>
